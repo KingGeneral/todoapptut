@@ -177,6 +177,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+            custom provider ztm
+        */
+        Sven\ArtisanView\ArtisanViewServiceProvider::class, //artisan make:view // https://github.com/svenluijten/artisan-view
+
     ],
 
     /*
