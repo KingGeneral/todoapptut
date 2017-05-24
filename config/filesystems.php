@@ -12,7 +12,8 @@ return [
     | based disks are available to your application. Just store away!
     |
     */
-
+    //ch local to public
+    // so can view userimage on page register
     'default' => env('FILESYSTEM_DRIVER', 'public'),
 
     /*
