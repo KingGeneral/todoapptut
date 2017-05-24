@@ -7,7 +7,8 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
+                    {{-- add enctype --}}
+                    <form class="form-horizontal" role="form" exctype="multipart/form-data" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -57,6 +58,20 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        {{-- add userimage photo --}}
+                        <div class="form-group">
+                            <label for="userimage" class="col-md-4 control-label">Image</label>
+
+                            <div class="col-md-6">
+                                <input type="file" name="userimage" id="userimage" class="form-control" required>
+                                @if ($errors->has('userimage'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('userimage') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
