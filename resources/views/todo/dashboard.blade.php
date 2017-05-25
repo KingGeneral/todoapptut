@@ -10,7 +10,7 @@
 					@foreach($todos as $todo)
 						<li class="list-group-item">
 							<a href="{{ url('todo/.$todo->id') }}" class="secondary-content"> <span></span></a>
-							<a class="secondary-content" href="{{ url('/todo/'.$todo->id).'/edit' }}" > <span class = "glyphicon glyphicon-pencil" > </span></a> 
+							<a class="secondary-content" href="{{ url('/todo/'.$todo->id).'/edit' }}" > <span class = "glyphicon glyphicon-pencil" ></span></a> 
 				            <a href="#" class = "secondary-content" onclick ="event.preventDefault();document.getElementById('delete-form').submit();"><span class="glyphicon glyphicon - trash "></span></a>
 				            <form id="delete - form" action="{{ url('/todo/'.$todo - > id) }}" method="POST" style="display: none;"> 
 				                {{ method_field('DELETE') }} {{ csrf_field() }} 
