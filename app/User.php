@@ -29,6 +29,6 @@ class User extends Authenticatable
 
     //function one to many
     public function todo(){
-        return $this->hasMany('App/Todo');
+        return $this->hasMany('App\Todo');
     }
 }
